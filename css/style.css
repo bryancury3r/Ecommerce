@@ -76,6 +76,13 @@ header {
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
 }
 
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
