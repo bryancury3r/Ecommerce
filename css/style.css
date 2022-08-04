@@ -136,7 +136,36 @@ header {
 .total-title {
   font-size: 1rem;
   font-weight: 600;
-  
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
+.btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weigth: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.btn-buy:hover {
+  background: var(--text-color);
 }
 
 .section-title {
@@ -173,7 +202,7 @@ header {
   width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
-  background-color: var(--bg-security);
+  
 
 }
 
