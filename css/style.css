@@ -15,7 +15,7 @@
   --main-color: #fd4646;
   --text-color: #171427;
   --bg-color: #fff;
-  --bg-security: #e0d5d5;
+  --bg-security: #e0d5d0;
 }
 
 img {
@@ -83,6 +83,11 @@ header {
   margin-top: 2rem;
 }
 
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+}
+
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -103,7 +108,6 @@ header {
 
 .product-box {
   position: relative;
-  background-color: var(--bg-security);
   padding: 8px;
 
 }
@@ -118,6 +122,8 @@ header {
   width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
+  background-color: var(--bg-security);
+
 }
 
 .product-title {
