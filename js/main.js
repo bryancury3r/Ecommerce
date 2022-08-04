@@ -36,3 +36,13 @@ function removeCartItem(event) {
   var buttonClicked = event.target
   buttonClicked.parentElement.remove()
 }
+
+// Update Total
+function updatetotal() {
+  var cartConter = document.getElementsByClassName('cart-content')[0]
+  var cartBoxes = cartConter.getElementsByClassName('cart-box')
+  for (var i = 0; i < cartBoxes.length; i++) {
+    var cartBox = cartBoxes[i]
+    var priceElement = cartBox.getElementsByClassName('cart-price')[0]
+  }
+}
