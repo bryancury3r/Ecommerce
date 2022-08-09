@@ -36,6 +36,11 @@ function ready() {
     var input = quantityInputs[i];
     input.addEventListener('change', quantityChanged);
   }
+  // Add To Cart
+  var addCart = document.getElementsByClassName('add-cart')
+  for (var i = 0; i < addCart.length; i++) {
+    var button = addCart[i]
+  }
 }
 
 function removeCartItem(event) {
