@@ -40,6 +40,7 @@ function ready() {
   var addCart = document.getElementsByClassName('add-cart')
   for (var i = 0; i < addCart.length; i++) {
     var button = addCart[i]
+    button.addEventListener('click', addCartClicked)
   }
 }
 
@@ -55,6 +56,13 @@ function quantityChanged(event) {
     input.value = 1;
   }
   updatetotal();
+}
+
+// Add to Cart
+function addCartClicked(event) {
+  var button = event.target
+  var shopProducts = button.parentElement
+  var title
 }
 
 // Update Total
