@@ -51,7 +51,7 @@ function removeCartItem(event) {
 }
 // Quantity Changes
 function quantityChanged(event) {
-  var input = event.target
+  var input = event.target;
   if (isNaN(input.value) || input.value <= 0){
     input.value = 1;
   }
@@ -77,12 +77,12 @@ function addProductToCart(title, price, productImg) {
   for (var i = 0; i < cartItemsNames.length; i++){
     if (cartItemsNames[i].innerText == title) {
       alert("Você já adicionou este item ao carrinho");
-    return;
+      return;
     }
   }
   
   var cartBoxContent = `
-  <img src="${productImg}" alt="Barra fix" class="cart-img">
+  <img src="${productImg}" alt="${title}" class="cart-img">
   <div class="detail-box">
   <div class="cart-product-title">${title}</div>
   <div class="cart-price">${price}</div>
@@ -95,24 +95,25 @@ function addProductToCart(title, price, productImg) {
   cartItems.append(cartShopBox)
   cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener('click', removeCartItem)
   cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener('change', quantityChanged)
+  
 }
   
-
-// Update Total
-function updatetotal() {
-  var cartConter = document.getElementsByClassName('cart-content')[0];
-  var cartBoxes = cartConter.getElementsByClassName('cart-box');
-  var total = 0;
-  for (var i = 0; i < cartBoxes.length; i++) {
-    var cartBox = cartBoxes[i];
-    var priceElement = cartBox.getElementsByClassName('cart-price')[0];
-    var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
-    var price = parseFloat(priceElement.innerText.replace("$", ""));
-    var quantity = quantityElement.value;
-    total = total + (price * quantity);
-    // If price Contain some Cents Value
-    total = Math.round(total * 100) / 100;
-
-    document.getElementsByClassName('total-price')[0].innerText = '$' + total;
+  // Update Total
+  function updatetotal() {
+    var cartContent = document.getElementsByClassName('cart-content')[0];
+    var cartBoxes = cartContent.getElementsByClassName('cart-box');
+    var total = 0;
+    for (var i = 0; i < cartBoxes.length; i++) {
+      var cartBox = cartBoxes[i];
+      var priceElement = cartBox.getElementsByClassName('cart-price')[0];
+      var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+      var price = parseFloat(priceElement.innerText.replace("$", ""));
+      var quantity = quantityElement.value;
+      total = total + price * quantity;
+      // If price Contain some Cents Value
+    }
+      total = Math.round(total * 100) / 100;
+      
+      document.getElementsByClassName("total-price")[0].innerText = "$" + total;
   }
-}
+  
